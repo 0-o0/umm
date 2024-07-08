@@ -1,0 +1,91 @@
+{
+  "name": "covert-muisc",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc -p tsconfig.prod.json && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier -w .",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "preview": "vite preview",
+    "preview:coverage": "vite preview --outDir coverage --port 5175",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@chakra-ui/anatomy": "^2.2.2",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@jixun/libparakeet": "0.4.3",
+    "@reduxjs/toolkit": "^2.0.1",
+    "framer-motion": "^10.18.0",
+    "nanoid": "^5.0.4",
+    "radash": "^11.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-icons": "^4.12.0",
+    "react-promise-suspense": "^0.3.4",
+    "react-redux": "^9.0.4",
+    "react-syntax-highlighter": "^15.5.0",
+    "sass": "^1.69.5",
+    "sql.js": "^1.9.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-replace": "^5.0.5",
+    "@testing-library/jest-dom": "^6.1.5",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/react-syntax-highlighter": "^15.5.11",
+    "@types/sql.js": "^1.4.9",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.1.0",
+    "@vitest/ui": "^1.1.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^8.0.3",
+    "jsdom": "^23.0.1",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "terser": "^5.27.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-plugin-pwa": "^0.17.4",
+    "vite-plugin-top-level-await": "^1.4.1",
+    "vite-plugin-wasm": "^3.3.0",
+    "vitest": "^1.1.0",
+    "webgl-fluid-enhanced": "^0.6.1",
+    "workbox-window": "^7.0.0"
+  },
+  "lint-staged": {
+    "*": "prettier --write --ignore-unknown",
+    "*.{js,jsx,ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 2
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@rollup/plugin-terser@0.4.3": "patches/@rollup__plugin-terser@0.4.3.patch",
+      "sql.js@1.9.0": "patches/sql.js@1.9.0.patch"
+    },
+    "overrides": {
+      "rollup-plugin-terser": "npm:@rollup/plugin-terser@0.4.3",
+      "sourcemap-codec": "npm:@jridgewell/sourcemap-codec@1.4.15"
+    }
+  }
+}

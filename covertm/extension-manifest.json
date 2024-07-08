@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "covert music",
+  "short_name": "covert music",
+  "icons": {
+    "128": "./img/icons/msapplication-icon-144x144.png"
+  },
+  "description": "covert music so that listen anywhere",
+  "permissions": [
+    "storage"
+  ],
+  "offline_enabled": true,
+  "options_page": "./index.html",
+  "homepage_url": "https://o-x.icu",
+  "action": {
+    "default_popup": "./popup.html"
+  }
+}

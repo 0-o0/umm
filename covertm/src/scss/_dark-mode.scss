@@ -1,0 +1,66 @@
+/*
+ * Styles - Dark Mode
+ */
+
+@media (prefers-color-scheme: dark) {
+  #app{
+    color: $dark-text-info;
+  }
+  body{
+    background-color: $dark-bg;
+  }
+
+  // Edit song information
+  .music-cover{
+    i{
+      &:hover{
+        color: $color-checkbox;
+      }
+    }
+    .el-image{
+      border: 1px solid $dark-border;
+    }
+  }
+  .edit-item{
+    .label{
+    }
+    .value{
+    }
+    .input{
+      input{
+        background-color: transparent !important;
+        border-bottom: 1px solid $dark-border;
+      }
+    }
+    i{
+      &:hover{
+        color: $color-checkbox;
+      }
+    }
+  }
+
+
+  // footer
+  #app-footer {
+    a {
+      color: lighten($text-comment, 5%);
+      &:hover{
+        color: $color-link;
+      }
+    }
+  }
+
+  // Custom styles
+  // Update information panel for home popup messages
+  .update-info{
+    border: 1px solid $dark-btn-bg !important;
+    .update-title{
+      color: $dark-text-main;
+      background-color: $dark-btn-bg !important;
+    }
+    .update-content{
+      color: $dark-text-info;
+      padding: 10px;
+    }
+  }
+}

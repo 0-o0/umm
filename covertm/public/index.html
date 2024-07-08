@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="webkit" name="renderer" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    <title>Co-music</title>
+    <meta content="convert music" name="keywords" />
+    <meta content="convert music anywhere" name="description" />
+    <script type="module">
+      import webGLFluidEnhanced from './wgl.mjs';
+
+      webGLFluidEnhanced.simulation(document.querySelector('canvas'), {
+        COLOR_PALETTE: ['#4685FF', '#F2F2F2', '#FFB084'],
+        HOVER: true,
+        SPLAT_KEY: 'Space',
+        BRIGHTNESS: 0.4,
+        BACK_COLOR: '#FFFFFF',
+        BLOOM: true,
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
