@@ -119,7 +119,7 @@ export function Nav() {
   }, []);
 
   return (
-    <nav style={{ position: 'fixed', top: 15, right: 30, zIndex: 1000 }}>
+    <nav style={{ position: 'fixed', top: '1.2vh', right: '2vw', zIndex: 1000 }}>
       <motion.li style={{ display: 'flex', width: '100%', cursor: 'pointer', flexDirection: 'row', alignItems: 'center', gap: '0.75rem', objectFit: 'contain' }} initial='hidden' animate='show'>
         {isDarkMode ? <SunIcon tabIndex={0} /> : <MoonIcon tabIndex={0} />}
         <PaletteIcon tabIndex={0} />

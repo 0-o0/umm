@@ -36,7 +36,7 @@ export function AppRoot() {
             </Tab>
             <Tab>
               <Icon as={MdQuestionAnswer} mr="1" />
-              <chakra.span>Q&A</chakra.span>
+              <chakra.span>Qa</chakra.span>
             </Tab>
           </TabList>
 
